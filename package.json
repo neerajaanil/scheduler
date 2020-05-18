@@ -1,5 +1,5 @@
 {
-  "name": "custom-react-cron",
+  "name": "ziplabs-custom-react-cron",
   "version": "1.1.2",
   "description": "Custom react component to generate cron expression",
   "keywords": [
