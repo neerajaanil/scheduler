@@ -20,25 +20,30 @@ export default class CustomCron extends Component {
             this.props.onChange(val)
         } 
     }
-    getMinutes() {
-        let minutes = [];
-        let leap = parseInt(this.props.minutes) || 1;
-        for(let i = 0 ; i<60 ; i = i + leap) {
-            minutes.push(<option value={i < 10 ? `0${i}` : i}>{i < 10 ? `0${i}` : i}</option>)
-        }
-        return minutes;
-    }
+    // getMinutes() {
+    //     let minutes = [];
+    //     let leap = parseInt(this.props.minutes) || 1;
+    //     for(let i = 0 ; i<60 ; i = i + leap) {
+    //         minutes.push(<option value={i < 10 ? `0${i}` : i}>{i < 10 ? `0${i}` : i}</option>)
+    //     }
+    //     return minutes;
+    // }
 
     render() {
         this.state.value = this.props.value
-        return (
-            <div className="well row well-small margin-right-0 margin-left-0">
-                <div className="col-md-offset-2 col-md-6 text_align_right">
-                    <span className="margin-right-10 ">&nbsp;At&nbsp;</span>
-                    <select  className="minutes" disabled={this.state.every ? true: false} onChange={this.onAtMinuteChange} value={this.state.value[1]}>
-                        {this.getMinutes()}
-                    </select>
-                </div>
-            </div>)
+        return (<div className="well">   
+            Every <input type="Number" onChange={this.onChange.bind(this)} value={this.state.value[1].split('/')[1]} min={1} max={60}/> minute(s)'
+        </div>)
+        // return (
+        //     <div classname="well">
+        //         <div>
+        //             <span classname="margin-right-10 ">&nbsp;Every&nbsp;</span>
+        //             <select classname="minutes" onchange={this.onAtMinuteChange} value={this.state.value[1]}>
+        //             {this.getMinutes()}
+        //             </select>
+        //             <span classname="margin-right-10 ">&nbsp;minutes'&nbsp;</span>
+
+        //         </div>
+        //     </div>)
     }
 }
