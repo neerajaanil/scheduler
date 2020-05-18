@@ -13,6 +13,14 @@ data = '* * * * * * *'
 ```
 npm install ziplabs-custom-react-cron
 
+```
+## demo
+[Live demo](https://glivne-chewy.github.io/custom-react-cron/)
+
+![alt text](https://raw.githubusercontent.com/sojinantony01/react-cron-generator/master/public/images/Screenshot%20from%202019-06-08%2000-31-31.png)
+
+![alt text](https://raw.githubusercontent.com/sojinantony01/react-cron-generator/master/public/images/Screenshot%20from%202019-06-08%2000-31-57.png)
+
 
 ```
 import React, { Component } from 'react'
@@ -86,6 +94,5 @@ export default App;
 ## Acknowledgments
 *cronstrue
 *viswanath lakshmanan
-
 *Guy Livne
 https://github.com/glivne-chwy/custom-react-cron
