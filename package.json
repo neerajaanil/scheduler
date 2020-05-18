@@ -3,18 +3,9 @@
   "version": "1.1.2",
   "description": "Custom react component to generate cron expression",
   "keywords": [
-    "Custom react cron generator",
-    "cron builder",
-    "Scheduler expression builder",
-    "cron",
-    "React cron",
-    "cron builder",
-    "cron ui",
-    "react cron ",
-    "react cron editor",
-    "react cron creator"
+    "Ziplabs Custom cron generator"
   ],
-  "author": "Neeraja Anil (cloning Guy Livne (cloning Sojin antony))",
+  "author": "Neeraja Anil (cloning Guy Livne)",
   "dependencies": {
     "cronstrue": "^1.72.0",
     "react-datepicker": "^2.8.0"
@@ -44,7 +35,6 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
-  "homepage": "https://glivne-chewy.github.io/custom-react-cron",
   "scripts": {
     "start": "react-scripts start",
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
