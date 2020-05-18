@@ -14,7 +14,7 @@
     "react cron editor",
     "react cron creator"
   ],
-  "author": "Guy Livne (cloning Sojin antony)",
+  "author": "Neeraja Anil (cloning Guy Livne (cloning Sojin antony))",
   "dependencies": {
     "cronstrue": "^1.72.0",
     "react-datepicker": "^2.8.0"
@@ -27,7 +27,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com//glivne-chewy/custom-react-cron.git"
+    "url": "https://github.com/neerajaanil/scheduler.git"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
