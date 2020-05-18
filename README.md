@@ -24,8 +24,8 @@ npm install ziplabs-custom-react-cron
 
 ```
 import React, { Component } from 'react'
-import CustomCron from 'custom-react-cron'
-import 'custom-react-cron/dist/cron-builder.css'
+import CustomCron from 'ziplabs-custom-react-cron'
+import 'ziplabs-custom-react-cron/dist/cron-builder.css'
 
 
 class App extends Component {
