@@ -46,7 +46,7 @@ export default class CustomCron extends Component {
         this.state.value = this.props.value;
         return (<div className="tab-pane" >
                     <div className="well well-small">
-                        <input type="radio" onClick={(e) => {this.setState({every:true}) ; this.props.onChange()}} value="1" name="DailyRadio" checked={this.state.every ? true : false} />
+                        <input type="radio" onClick={(e) => {this.setState({every:true}) ; this.props.onChange(['0','0','00','1/1','*','?','*'])}} value="1" name="DailyRadio" checked={this.state.every ? true:false} />
                         &nbsp; Every &nbsp;
                         <input disabled={this.state.every ? false: true} type="Number" onChange={this.onDayChange} value={this.state.value[3].split('/')[1] ? this.state.value[3].split('/')[1] :''} />
                         &nbsp; day(s)

@@ -38,8 +38,8 @@ export default class CustomCron extends Component {
     }
     componentWillMount() {
         if(!this.props.value || this.props.value.split(' ').length !== 7 ) {
-            this.state.value = defaultTabsVal[tabs[0]];
-            this.state.selectedTab = tabs[0];
+            this.state.value = defaultTabsVal[tabs[3]];
+            this.state.selectedTab = tabs[3];
             this.parentChange(this.state.value)
         } else  {
             this.state.value = this.props.value.replace(/,/g, '!').split(' ');
