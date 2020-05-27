@@ -1,23 +1,22 @@
 import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
 import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
 import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _assertThisInitialized from "@babel/runtime/helpers/esm/assertThisInitialized";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
+import _createSuper from "@babel/runtime/helpers/esm/createSuper";
 import React, { Component } from 'react';
 
-var CustomCron =
-/*#__PURE__*/
-function (_Component) {
+var CustomCron = /*#__PURE__*/function (_Component) {
   _inherits(CustomCron, _Component);
+
+  var _super = _createSuper(CustomCron);
 
   function CustomCron(props) {
     var _this;
 
     _classCallCheck(this, CustomCron);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(CustomCron).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {
       hour: 0,
       minute: 0
@@ -88,11 +87,11 @@ function (_Component) {
       var _this2 = this;
 
       this.state.value = this.props.value;
-      return React.createElement("div", {
+      return /*#__PURE__*/React.createElement("div", {
         className: "tab-pane"
-      }, React.createElement("div", {
+      }, /*#__PURE__*/React.createElement("div", {
         className: "well well-small"
-      }, React.createElement("input", {
+      }, /*#__PURE__*/React.createElement("input", {
         type: "radio",
         onChange: function onChange(e) {
           _this2.setState({
@@ -104,14 +103,14 @@ function (_Component) {
         value: "1",
         name: "MonthlyRadio",
         checked: this.state.every === "1" ? true : false
-      }), "\xA0Day\xA0", React.createElement("input", {
+      }), "\xA0Day\xA0", /*#__PURE__*/React.createElement("input", {
         readOnly: this.state.every !== "1",
         type: "number",
         value: this.state.value[3],
         onChange: this.onDayChange
-      }), "\xA0of every month(s)"), React.createElement("div", {
+      }), "\xA0of every month(s)"), /*#__PURE__*/React.createElement("div", {
         className: "well well-small"
-      }, React.createElement("input", {
+      }, /*#__PURE__*/React.createElement("input", {
         onChange: function onChange(e) {
           _this2.setState({
             every: e.target.value
@@ -123,9 +122,9 @@ function (_Component) {
         value: "2",
         name: "DailyRadio",
         checked: this.state.every === "2" ? true : false
-      }), "\xA0 Last day of every month \xA0"), React.createElement("div", {
+      }), "\xA0 Last day of every month \xA0"), /*#__PURE__*/React.createElement("div", {
         className: "well well-small"
-      }, React.createElement("input", {
+      }, /*#__PURE__*/React.createElement("input", {
         onChange: function onChange(e) {
           _this2.setState({
             every: e.target.value
@@ -137,9 +136,9 @@ function (_Component) {
         value: "3",
         name: "DailyRadio",
         checked: this.state.every === "3" ? true : false
-      }), "\xA0 On the last weekday of every month \xA0"), React.createElement("div", {
+      }), "\xA0 On the last weekday of every month \xA0"), /*#__PURE__*/React.createElement("div", {
         className: "well well-small"
-      }, React.createElement("input", {
+      }, /*#__PURE__*/React.createElement("input", {
         type: "radio",
         onChange: function onChange(e) {
           _this2.setState({
@@ -151,16 +150,16 @@ function (_Component) {
         value: "4",
         name: "MonthlyRadio",
         checked: this.state.every === "4" ? true : false
-      }), React.createElement("input", {
+      }), /*#__PURE__*/React.createElement("input", {
         readOnly: this.state.every !== "4",
         type: "number",
         value: this.state.value[3].split('-')[1],
         onChange: this.onLastDayChange
-      }), "\xA0day(s) before the end of the month"), "\xA0 Start time \xA0", React.createElement("select", {
+      }), "\xA0day(s) before the end of the month"), "\xA0 Start time \xA0", /*#__PURE__*/React.createElement("select", {
         className: "hours",
         onChange: this.onAtHourChange,
         value: this.state.value[2]
-      }, this.getHours()), "\xA0 : \xA0", React.createElement("select", _defineProperty({
+      }, this.getHours()), "\xA0 : \xA0", /*#__PURE__*/React.createElement("select", _defineProperty({
         value: "DailyMinutes",
         className: "minutes",
         onChange: this.onAtMinuteChange
@@ -173,7 +172,7 @@ function (_Component) {
       var leap = parseInt(this.props.hours) || 1;
 
       for (var i = 0; i < 24; i = i + leap) {
-        hours.push(React.createElement("option", {
+        hours.push( /*#__PURE__*/React.createElement("option", {
           id: i,
           value: i < 10 ? "0".concat(i) : i
         }, i < 10 ? "0".concat(i) : i));
@@ -188,7 +187,7 @@ function (_Component) {
       var leap = parseInt(this.props.minutes) || 1;
 
       for (var i = 0; i < 60; i = i + leap) {
-        minutes.push(React.createElement("option", {
+        minutes.push( /*#__PURE__*/React.createElement("option", {
           id: i,
           value: i < 10 ? "0".concat(i) : i
         }, i < 10 ? "0".concat(i) : i));

@@ -1,25 +1,24 @@
 import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
 import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
 import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _assertThisInitialized from "@babel/runtime/helpers/esm/assertThisInitialized";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
+import _createSuper from "@babel/runtime/helpers/esm/createSuper";
 import React, { Component } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-var CustomCron =
-/*#__PURE__*/
-function (_Component) {
+var CustomCron = /*#__PURE__*/function (_Component) {
   _inherits(CustomCron, _Component);
+
+  var _super = _createSuper(CustomCron);
 
   function CustomCron(props) {
     var _this;
 
     _classCallCheck(this, CustomCron);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(CustomCron).call(this, props));
+    _this = _super.call(this, props);
 
     var startDate = _this.getStartDate(props);
 
@@ -77,20 +76,20 @@ function (_Component) {
     key: "render",
     value: function render() {
       this.state.value = this.props.value;
-      return React.createElement("div", {
+      return /*#__PURE__*/React.createElement("div", {
         className: "tab-pane"
-      }, React.createElement("div", {
+      }, /*#__PURE__*/React.createElement("div", {
         className: "well well-small"
-      }, "\xA0 In: \xA0", React.createElement(DatePicker, {
+      }, "\xA0 In: \xA0", /*#__PURE__*/React.createElement(DatePicker, {
         selected: this.state.startDate,
         onChange: this.onDayChange,
         minDate: new Date()
-      })), "\xA0 At: \xA0", React.createElement("select", {
+      })), "\xA0 At: \xA0", /*#__PURE__*/React.createElement("select", {
         id: "DailyHours",
         className: "hours",
         onChange: this.onAtHourChange,
         value: this.state.value[2]
-      }, this.getHours()), "\xA0 : \xA0", React.createElement("select", {
+      }, this.getHours()), "\xA0 : \xA0", /*#__PURE__*/React.createElement("select", {
         id: "DailyMinutes",
         className: "minutes",
         onChange: this.onAtMinuteChange,
@@ -105,7 +104,7 @@ function (_Component) {
       var startHour = this.isToday() ? this.getNextHour() : 0;
 
       for (var i = startHour; i < 24; i = i + leap) {
-        hours.push(React.createElement("option", {
+        hours.push( /*#__PURE__*/React.createElement("option", {
           id: i,
           value: i < 10 ? "0".concat(i) : i
         }, i < 10 ? "0".concat(i) : i));
@@ -132,7 +131,7 @@ function (_Component) {
       var leap = parseInt(this.props.minutes) || 1;
 
       for (var i = 0; i < 60; i = i + leap) {
-        minutes.push(React.createElement("option", {
+        minutes.push( /*#__PURE__*/React.createElement("option", {
           id: i,
           value: i < 10 ? "0".concat(i) : i
         }, i < 10 ? "0".concat(i) : i));

@@ -1,8 +1,7 @@
 import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
 import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
+import _createSuper from "@babel/runtime/helpers/esm/createSuper";
 import React, { Component } from 'react';
 import cronstrue from 'cronstrue';
 import Once from './once';
@@ -27,17 +26,17 @@ var defaultTabsVal = {
 };
 var tabs = [];
 
-var CustomCron =
-/*#__PURE__*/
-function (_Component) {
+var CustomCron = /*#__PURE__*/function (_Component) {
   _inherits(CustomCron, _Component);
+
+  var _super = _createSuper(CustomCron);
 
   function CustomCron(props) {
     var _this;
 
     _classCallCheck(this, CustomCron);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(CustomCron).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {//    selectedTab: tabs[0],
     };
     tabs = props.tabs || defaultTabs;
@@ -48,8 +47,8 @@ function (_Component) {
     key: "componentWillMount",
     value: function componentWillMount() {
       if (!this.props.value || this.props.value.split(' ').length !== 7) {
-        this.state.value = defaultTabsVal[tabs[0]];
-        this.state.selectedTab = tabs[0];
+        this.state.value = defaultTabsVal[tabs[3]];
+        this.state.selectedTab = tabs[3];
         this.parentChange(this.state.value);
       } else {
         this.state.value = this.props.value.replace(/,/g, '!').split(' ');
@@ -93,9 +92,9 @@ function (_Component) {
       var _this2 = this;
 
       return tabs.map(function (d) {
-        return React.createElement("li", {
+        return /*#__PURE__*/React.createElement("li", {
           className: _this2.state.selectedTab === d ? 'active' : ''
-        }, React.createElement("a", {
+        }, /*#__PURE__*/React.createElement("a", {
           onClick: _this2.tabChanged.bind(_this2, d)
         }, d));
       });
@@ -141,7 +140,7 @@ function (_Component) {
     value: function getComponent(tab) {
       switch (tab) {
         case defaultTabs[0]:
-          return React.createElement(Once, {
+          return /*#__PURE__*/React.createElement(Once, {
             value: this.state.value,
             hours: this.props.hours,
             minutes: this.props.minutes,
@@ -150,14 +149,14 @@ function (_Component) {
           break;
 
         case defaultTabs[1]:
-          return React.createElement(Minutes, {
+          return /*#__PURE__*/React.createElement(Minutes, {
             value: this.state.value,
             onChange: this.onValueChange.bind(this)
           });
           break;
 
         case defaultTabs[2]:
-          return React.createElement(Hourly, {
+          return /*#__PURE__*/React.createElement(Hourly, {
             value: this.state.value,
             hours: this.props.hours,
             minutes: this.props.minutes,
@@ -166,7 +165,7 @@ function (_Component) {
           break;
 
         case defaultTabs[3]:
-          return React.createElement(Daily, {
+          return /*#__PURE__*/React.createElement(Daily, {
             value: this.state.value,
             hours: this.props.hours,
             minutes: this.props.minutes,
@@ -175,7 +174,7 @@ function (_Component) {
           break;
 
         case defaultTabs[4]:
-          return React.createElement(Weekly, {
+          return /*#__PURE__*/React.createElement(Weekly, {
             value: this.state.value,
             hours: this.props.hours,
             minutes: this.props.minutes,
@@ -184,7 +183,7 @@ function (_Component) {
           break;
 
         case defaultTabs[5]:
-          return React.createElement(Monthly, {
+          return /*#__PURE__*/React.createElement(Monthly, {
             value: this.state.value,
             hours: this.props.hours,
             minutes: this.props.minutes,
@@ -193,7 +192,7 @@ function (_Component) {
           break;
 
         case defaultTabs[6]:
-          return React.createElement(Yearly, {
+          return /*#__PURE__*/React.createElement(Yearly, {
             value: this.state.value,
             hours: this.props.hours,
             minutes: this.props.minutes,
@@ -208,15 +207,15 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return React.createElement("div", null, this.props.style && React.createElement("style", null, this.props.style), React.createElement("div", {
+      return /*#__PURE__*/React.createElement("div", null, this.props.style && /*#__PURE__*/React.createElement("style", null, this.props.style), /*#__PURE__*/React.createElement("div", {
         className: "cron_builder"
-      }, React.createElement("ul", {
+      }, /*#__PURE__*/React.createElement("ul", {
         className: "nav nav-tabs"
-      }, this.getHeaders()), React.createElement("div", {
+      }, this.getHeaders()), /*#__PURE__*/React.createElement("div", {
         className: "cron_builder_bordering"
-      }, this.getComponent(this.state.selectedTab)), this.props.showResultText && React.createElement("div", {
+      }, this.getComponent(this.state.selectedTab)), this.props.showResultText && /*#__PURE__*/React.createElement("div", {
         className: "cron-builder-bg"
-      }, this.getVal()), this.props.showResultCron && React.createElement("div", {
+      }, this.getVal()), this.props.showResultCron && /*#__PURE__*/React.createElement("div", {
         className: "cron-builder-bg"
       }, this.state.value.toString().replace(/,/g, ' ').replace(/!/g, ','))));
     }
